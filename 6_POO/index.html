@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO com JavaScript - Pequeno Tuytorial Interativo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <header> <!-- Conteiner para título principal  -->
+        <h1>POO com JavaScript</h1>
+        <p>Aprenda Programação Orientada à Objetos passo a passo</p>        
+    </header>
+
+    <!-- Barra de Progresso  -->
+    <div class="progress-container">
+        <div class="progress-bar">
+            <!-- Div vazia que cresce (muda a largura via JS) para mostrar o progresso  -->
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <!-- Identificado para que o JavaScript consiga atualizar o número de etadas automaticamente  -->
+        <div class="progress-text">Etapa <span id="currentStep">1</span> de 4  </div>
+    </div>
+
+    <!-- Vazia porque os botões(1, 2, 3...) serão gerados automaticamente pelo JS para evitar repetição manual  -->
+    <nav>
+        <div class="nav-container" id="navContainer"></div>
+    </nav>
+    
+    <!-- Conteúdo Principal  -->
+     <main class="container" id="mainContainer">
+        <section class="section active" id="step1">
+            <div class="lesson-card">
+                <div class="lesson-header">
+                    <div class="lesson-number"> 1 </div>
+                    <h2 class="lesson-title">Métodos em Objetos</h2>
+                </div>
+                <p class="lesson-description"> Objetos podem conter funções, chamadas de métodos.</p>
+
+                <div class="content-grid"><!-- Divide a tela código/console  -->
+                    <div class="code-area">
+                        <div class="code-header"> <span>script.js</span> </div>
+                        <pre><code> const animal = {
+                            nome: "Bob",
+                            latir: function(){
+                                return "au au!";
+                            }
+                            };
+                        </code></pre>
+                    </div><!-- Fecha a class code-area  -->
+                    <div class="console-area">
+                        <div class="console-header">
+                            <span>Console</span>
+                            <button class="btn-run" onclick="runExample(1)">Executar</button>
+                        </div>
+                        <div class="console-content" id="console1">
+                            <div class="console-line">> animal.latir()</div>
+                        </div>
+                    </div><!-- Fecha a class="console-area"  -->
+
+                </div><!-- Fecha a class="content-grid"  -->
+
+                <div class="action-buttons">
+                    <button class="btn btn-sucess" onclick="nextStep()">Próxima Etapa</button>
+                </div>
+
+            </div><!-- fecha a class = lesson-card  -->
+
+        </section>
+
+        <section class="section" id="step2">
+            <div class="lesson-card">
+                <div class="lesson-header">
+                    <div class="lesson-number"> 2 </div>
+                    <h2 class="lesson-title">O uso do this</h2>
+                </div>
+                <p class="lesson-description"> O <code>this</code> refere-se ao proprio objeto. </p>
+
+                <div class="content-grid"><!-- Divide a tela código/console  -->
+                    <div class="code-area">
+                        
+                        <pre><code> const pessoa = {
+                            nome: "wile",
+                            latir: function(){
+                                return "Olá! " + this.nome;
+                            }
+                         };
+                        </code></pre>
+                    </div><!-- Fecha a class code-area  -->
+                    <div class="console-area">
+                        <div class="console-header">
+                            <span>Console</span>
+                            <button class="btn-run" onclick="runExample(2)">Executar</button>
+                        </div>
+                        <div class="console-content" id="console2">
+                        </div>
+                        
+                    </div><!-- Fecha a class="console-area"  -->
+
+                </div><!-- Fecha a class="content-grid"  -->
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                    <button class="btn btn-sucess" onclick="nextStep()">Próxima Etapa</button>
+                </div>
+
+            </div><!-- fecha a class = lesson-card  -->
+
+        </section>
+
+     </main>
+
+    <script src="js/scripts.js"></script>
+    
+</body>
+</html>

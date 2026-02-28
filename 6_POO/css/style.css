@@ -1,0 +1,45 @@
+/* Declarando as variáveis */
+:root{
+    --primary: #6366f1;
+    --secondary: #ec4899;
+    --dark: #1e293b;
+    --darker: #0f172a;
+    --light: #f8fafc;
+    --gray: #64748b;
+    --sucess: #10b981;
+
+}
+
+/* Estilização do corpo da da página*/
+body{
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--darker);
+    color: var(--light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Estilização do topo */
+
+header{
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 2rem;
+    text-align: center;
+}
+
+/* estiliza a barra de progresso */
+.progress-container{
+    background: var(--dark);
+    padding: 1rem;
+    text-align: center;
+}
+
+.progress-bar{
+    width: 80%;
+    height: 10px;
+    background: #334155;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* 
